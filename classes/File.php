@@ -25,6 +25,9 @@ class File
 
     public function write($text)
     {
-
+        if (fwrite($this->fp, $text) === FALSE) {
+            echo "Не могу произвести запись в {$this->file}";
+            exit;
+        }
     }
 }
