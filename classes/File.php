@@ -13,6 +13,9 @@ class File
             exit;
         }
 
+        $this->fp = fopen($this->file, 'a');
+
+
     }
 
     public function __destruct()
