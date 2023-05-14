@@ -20,7 +20,7 @@ class File
 
     public function __destruct()
     {
-
+        fclose($this->fp);
     }
 
     public function write($text)
